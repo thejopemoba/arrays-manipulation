@@ -29,6 +29,30 @@ os valores e keys separadamente, possuí o mesmo comportamento do array_merge,
 porém pode ser usado arrays com outros elementos, ao contrário do array_merge */
 
 $alunos2022_unpacking = [...$alunos2021, 'Elemento', ...$novosAlunos];
-var_dump($alunos2022_desp)
+var_dump($alunos2022_desp);
+
+
+// adicionar elementos ao final de um array
+
+array_push($alunos2022_unpacking, 'Alex', 'Jacinto');
+
+// caso queira adicionar apenas 1 elemento, usamos essa sintaxe:
+
+$alunos2022_unpacking[] = 'Luizinho';
+
+// caso queira adicionar o elemento no ínicio do array, usamos:
+
+array_unshift($alunos2022_unpacking, 'Beatriz');
+
+// aqui o primeiro elemento do array é retirado e retornado, em seguida reordena o array
+
+echo array_shift($alunos2022_unpacking) . PHP_EOL;
+
+// o contrário acontece aqui, o último e retirado e retornado, reodernando o array.
+
+echo array_pop($alunos2022_unpacking) . PHP_EOL;
+
+
+var_dump($alunos2022_unpacking);
 
 ?>
